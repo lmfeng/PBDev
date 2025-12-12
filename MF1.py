@@ -270,8 +270,7 @@ for i, cl in enumerate(existing_subclasses):
     avg[i] = np.mean(adata.obs.loc[mask, 'total_counts'])
     avg_genes[i] = np.mean(adata.obs.loc[mask, 'n_genes'])
 
-# 4. 计算性别比例
-# 确保存在sex列
+
 if 'sex' in adata.obs:
     sex_categories = adata.obs['sex'].dropna().unique()
     n_sex = len(sex_categories)
