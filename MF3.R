@@ -6,6 +6,7 @@ pseudotime_df <- data.frame(cell = names(cds.ExN_2nd@principal_graph_aux@listDat
                             pseudotime = cds.ExN_2nd@principal_graph_aux@listData[["UMAP"]][["pseudotime"]],
                             stringsAsFactors = FALSE)
 
+
 rownames(pseudotime_df) <- pseudotime_df$cell
 ExN_2nd@meta.data$m3_pseudotime <- pseudotime_df[rownames(ExN_2nd@meta.data), "pseudotime"]
 
